@@ -1,23 +1,36 @@
 <style>
     .content{
-        height: 300px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
     }
-    .validate_button{
-        background-color: blue;
-        height: 50px;
-        width: 70px;
+    .Icao_entry{
+        width: 80%;
+        margin:auto;
+        text-align: center;
+
     }
 
     .titre{
         text-align: center;
         font-size: 1em;
     }
+    .button_validate{
+        margin-top: 0.3em;
+
+        background-color: #4c8fe6;
+        transform: translateX(100%);
+    }
+    .button_validate:hover{
+        background-color: #012f6b;
+    }
 </style>
+<script src="jquery.min.js"></script>
+
 <div class="content">
 
-    <h1 class="titre"> Ceci est un test </h1>
-    <button class="validate_button"> Valider </button>
-
+    <input type="text" placeholder="ICAO" id="ICAO_airport" class="Icao_entry">
+    <button id="Valider" class="button_validate"> Valider </button>
+    <div id="test"></div>
 
 </div>
+<script src="app.js"></script>
