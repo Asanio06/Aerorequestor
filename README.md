@@ -5,5 +5,6 @@ This is the first time I have created a chrome extension.
 
 Next step :
 
-- [ ] Display the METAR according to an airport
-- [ ] Select aeroport on a list
+- [x] Display the METAR according to an airport
+- [ ] Select airport on a list
+- [ ] Have the recommended runway
