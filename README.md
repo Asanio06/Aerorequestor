@@ -4,4 +4,5 @@ I would like to create a chrome extension that will facilitate certain searches 
 This is the first time I have created a chrome extension.
 
 Next step :
-- Display the METAR according to an airport
+- [ ]Display the METAR according to an airport
+- [ ] Select aeroport on a list
