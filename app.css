@@ -1,0 +1,28 @@
+.content{
+    height: 200px;
+    width: 200px;
+}
+.horizontal_center{
+    margin:0 auto;
+    text-align: center;
+}
+.Icao_entry{
+    width: 80%;
+    
+    text-align: center;
+
+}
+
+.titre{
+    text-align: center;
+    font-size: 1em;
+}
+.button_validate{
+    margin-top: 0.3em;
+
+    background-color: #4c8fe6;
+
+}
+.button_validate:hover{
+    background-color: #012f6b;
+}
