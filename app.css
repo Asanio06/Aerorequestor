@@ -33,10 +33,11 @@
 }
 .button_validate{
     margin-top: 0.3em;
-
-    background-color: #4c8fe6;
+    background-color: #aacfff;
+    border-radius: 10px;
+    border-style: none;
 
 }
 .button_validate:hover{
-    background-color: #012f6b;
+    background-color: #3c87e9;
 }

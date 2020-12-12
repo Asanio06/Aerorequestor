@@ -9,11 +9,11 @@ function getMetar(){
 
     $.ajax({
         type: 'GET',
-        url: 'https://api.checkwx.com/metar/'+airport,
-        headers: { 'X-API-Key': 'ed3c7cbc98f94a2a852bbacfb6' },
+        url: 'http://localhost/Aerorequestor_api/index.php?request=metar_of_airport&airport='+airport,
+        data: { request: "metar_of_airport", airport: airport },
         dataType: 'json',
         success: function (result) {
-          document.getElementById('METAR').innerText = result['data']
+          document.getElementById('METAR').innerText = result
         }
       });
 
