@@ -3,6 +3,15 @@ button_valider.addEventListener('click',getMetar)
 var button_charts = document.getElementById('Charts')
 button_charts.addEventListener('click',open_link_of_sia)
 
+$.ajax({
+  type: 'GET',
+  url: 'http://localhost/Aerorequestor_api/index.php?request=airport_list',
+  dataType: 'html',
+  success: function (result) {
+    document.getElementById('content_for_datalist').innerHTML = result
+  }
+});
+
 function getMetar(){
 
     var airport = document.getElementById('ICAO_airport').value
