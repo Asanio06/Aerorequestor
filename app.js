@@ -6,6 +6,7 @@ button_charts.addEventListener('click',open_link_of_sia)
 function getMetar(){
 
     var airport = document.getElementById('ICAO_airport').value
+    airport = airport.toUpperCase()
 
     $.ajax({
         type: 'GET',
@@ -21,6 +22,7 @@ function getMetar(){
 
 function open_link_of_sia(){
     var airport_requested = document.getElementById('ICAO_airport').value
+    airport_requested = airport_requested.toUpperCase()
    lien = 'https://www.sia.aviation-civile.gouv.fr/dvd/eAIP_03_DEC_2020/FRANCE/AIRAC-2020-12-03/html/eAIP/FR-AD-2.'+ airport_requested +'-fr-FR.html#AD-2.eAIP.' + airport_requested
    chrome.tabs.create({ url: lien })
 }
