@@ -9,7 +9,7 @@ function getMetar(){
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/Aerorequestor_api/index.php?request=metar_of_airport&airport='+airport,
+        url: 'http://asanio.alwaysdata.net/index.php?request=metar_of_airport&airport='+airport,
         data: { request: "metar_of_airport", airport: airport },
         dataType: 'json',
         success: function (result) {
