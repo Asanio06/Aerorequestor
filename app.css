@@ -3,6 +3,13 @@
     width: 200px;
     border-radius: 15px;
 }
+.Windiest_airport{
+    border-style: solid;
+    border-color: #3c87e9;
+    border-width: 2px;
+    width: 150px;
+    height: 50px;
+}
 .horizontal_center{
     margin:0 auto;
     text-align: center;
@@ -25,6 +32,18 @@
     
     text-align: center;
 
+}
+.title_of_part{
+    text-decoration: underline;
+    color: rgb(50, 103, 184);
+    font-size: 1.5em;
+}
+
+#windiest_airport_name{
+    text-decoration: underline;
+    color: rgb(50, 103, 184);
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .titre{
