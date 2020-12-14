@@ -6,7 +6,7 @@ This is the first time I have created a chrome extension.
 Next step :
 
 - [x] Display the METAR according to an airport
-- [ ] Select airport on a list
+- [x] Select airport on a list
 - [ ] Display the windiest airport
 - [ ] Display if vfr is recommend
 - [ ] Select if you want vfr or ifr charts
