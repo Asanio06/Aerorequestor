@@ -17,7 +17,7 @@ $.ajax({
   url: 'http://asanio.alwaysdata.net/index.php?request=Windiest_airport',
   dataType: 'json',
   success: function (result) {
-    document.getElementById('windiest_airport_name').innerText = result['name_of_airport']
+    //document.getElementById('windiest_airport_name').innerText = result['name_of_airport']
     document.getElementById('windiest_metar').innerText = result['metar']
 
   }
