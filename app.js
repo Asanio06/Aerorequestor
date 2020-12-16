@@ -34,7 +34,8 @@ function getMetar(){
         data: { request: "metar_of_airport", airport: airport },
         dataType: 'json',
         success: function (result) {
-          document.getElementById('METAR').innerText = result
+          document.getElementById('METAR').innerText = result['metar']
+          document.getElementById('advise').innerText = result['advise']
         }
       });
 
