@@ -11,5 +11,7 @@ Next step :
 - [ ] Display if vfr is recommend
 - [ ] Select if you want vfr or ifr charts
 - [ ] If is Ifr, select the type or charts (ADC,AIC etc...)
-- [ ] Display the good charts
+- [ ] Display list of charts of airport in France
+- [ ] Display list of charts of airport in Belgium
+- [ ] Display list of charts of airport in United Kingdom
 - [ ] Have the recommended runway
