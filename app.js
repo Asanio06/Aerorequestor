@@ -36,6 +36,7 @@ function getMetar(){
         success: function (result) {
           document.getElementById('METAR').innerText = result['metar']
           document.getElementById('advise').innerText = result['advise']
+          document.getElementById('advise_content').style.visibility = 'visible'
         }
       });
 

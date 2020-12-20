@@ -27,6 +27,22 @@
  font-style: italic;
  font-weight: bold;
 }
+
+#advise{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+.title_advise{
+    color: rgb(97, 117, 146);
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+#advise_content{
+    visibility: hidden;
+}
+
 .Icao_entry{
     width: 80%;
     
