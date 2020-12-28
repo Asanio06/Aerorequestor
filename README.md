@@ -7,8 +7,8 @@ Next step :
 
 - [x] Display the METAR according to an airport
 - [x] Select airport on a list
-- [ ] Display the windiest airport
-- [ ] Display if vfr is recommend
+- [x] Display the windiest airport
+- [x] Display if vfr is recommend
 - [ ] Select if you want vfr or ifr charts
 - [ ] If is Ifr, select the type or charts (ADC,AIC etc...)
 - [ ] Display list of charts of airport in France
