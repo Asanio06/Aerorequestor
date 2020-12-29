@@ -1,6 +1,6 @@
 .content{
-    height: 400px;
-    width: 200px;
+    height: 300px;
+    width: 350px;
     border-radius: 15px;
 }
 #Windiest_airport{
@@ -12,11 +12,22 @@
 }
 #ICAO_airport{
     text-align: center;
+    width: 95%;
     border-style: solid;
     border-color: rgb(50, 103, 184);
     border-width: 2px;
     border-radius: 10px;
 }
+
+#list_ifr_charts{
+    text-align: center;
+    width: 95%;
+    border-style: solid;
+    border-color: rgb(50, 103, 184);
+    border-width: 2px;
+    border-radius: 10px;
+}
+
 #Metar{
  margin-top: 2px;
  text-align: center;
@@ -72,4 +83,8 @@
 }
 .button_validate:hover{
     background-color: #3c87e9;
+}
+
+#zone_charts{
+    /*visibility: hidden;*/
 }

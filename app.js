@@ -37,8 +37,24 @@ function getMetar(){
           document.getElementById('METAR').innerText = result['metar']
           document.getElementById('advise').innerText = result['advise']
           document.getElementById('advise_content').style.visibility = 'visible'
+          get_datalist_ifr_charts_of_airport(airport)
         }
       });
+
+}
+
+function get_datalist_ifr_charts_of_airport(icao_airport){
+
+  $.ajax({
+    type: 'GET',
+    url: 'http://asanio.alwaysdata.net/index.php?request=list_charts_of_airport&airport='+icao_airport,
+    data: { request: "list_charts_of_airport", airport: icao_airport },
+    dataType: 'html',
+    success: function (result) {
+      document.getElementById('content_for_datalist_list_ifr_chart').innerHTML = result
+    }
+  });
+
 
 }
 
