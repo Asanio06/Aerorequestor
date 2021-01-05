@@ -8,6 +8,7 @@
      "https://*/*",
      "tabs"
     ],
+    
     "browser_action": {   
      "default_icon" : "image/airplane_icon.png", 
      "default_popup": "app.html" 

@@ -55,12 +55,19 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
     }
   });
 
-
 }
 
 function open_link_of_sia(){
-    var airport_requested = document.getElementById('ICAO_airport').value
-    airport_requested = airport_requested.toUpperCase()
-   lien = 'https://www.sia.aviation-civile.gouv.fr/dvd/eAIP_03_DEC_2020/FRANCE/AIRAC-2020-12-03/html/eAIP/FR-AD-2.'+ airport_requested +'-fr-FR.html#AD-2.eAIP.' + airport_requested
-   chrome.tabs.create({ url: lien })
+  var name_of_chart = document.getElementById('list_ifr_charts').value
+  
+  $.ajax({
+    type: 'GET',
+    url: 'http://asanio.alwaysdata.net/index.php?request=get_url_of_chart&charts='+name_of_chart,
+    data: { request: "get_url_of_chart", charts: name_of_chart },
+    dataType: 'json',
+    success: function (result) {
+        chrome.tabs.create({ url: result });
+    }
+  });
+
 }
