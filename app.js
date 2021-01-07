@@ -50,6 +50,11 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
     url: 'http://asanio.alwaysdata.net/index.php?request=list_charts_of_airport&airport='+icao_airport,
     data: { request: "list_charts_of_airport", airport: icao_airport },
     dataType: 'html',
+    statusCode: {
+      204: function() {
+        document.getElementById('zone_charts').style.visibility = 'hidden'
+      }
+    },
     success: function (result) {
       if(result){
         document.getElementById('zone_charts').style.visibility = 'visible'
