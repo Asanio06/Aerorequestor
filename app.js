@@ -51,7 +51,11 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
     data: { request: "list_charts_of_airport", airport: icao_airport },
     dataType: 'html',
     success: function (result) {
-      document.getElementById('content_for_datalist_list_ifr_chart').innerHTML = result
+      if(result){
+        document.getElementById('zone_charts').style.visibility = 'visible'
+        document.getElementById('content_for_datalist_list_ifr_chart').innerHTML = result
+      }
+  
     }
   });
 
