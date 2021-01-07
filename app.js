@@ -58,6 +58,7 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
     success: function (result) {
       if(result){
         document.getElementById('zone_charts').style.visibility = 'visible'
+        document.getElementById('list_ifr_charts').value = ''
         document.getElementById('content_for_datalist_list_ifr_chart').innerHTML = result
       }
   
