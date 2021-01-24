@@ -4,58 +4,69 @@
 <link rel="stylesheet" href="bootstrap4\css\bootstrap.min.css">
 <script src="bootstrap4\js\bootstrap.min.js"></script>
 
-<div class="page_content">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-12 zone_button_nav mt-1">
-                <div class="row">
-                    <div class="col-6 button_nav_welcome">
-                        <div class="row justify-content-center">
-                            <button class="nav_button">
-                                <div class="text_content">
-                                    WELCOME
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-        
-                    <div class="col-6 button_nav_metar_charts">
-                        <div class="row justify-content-center">
-                            <button class="nav_button">
-                                <div class="text_content">
-                                    METAR/CHARTS
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12  mt-2">
-                <div class="row justify-content-center">
-                    <div class="zone_metar_charts">
-                        <div class=" col-12 mt-1">
+<body>
+    <div class="page_content">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-12 zone_button_nav mt-1">
+                    <div class="row">
+                        <div class="col-6 button_nav_welcome">
                             <div class="row justify-content-center">
-                                <input type="text" class="input_airport">
-                                <button class="button_form mt-1">
-                                    <div class="text_in_button_form">
-                                        Request
+                                <button class="nav_button">
+                                    <div class="text_content">
+                                        WELCOME
                                     </div>
                                 </button>
-
                             </div>
                         </div>
-                        
+            
+                        <div class="col-6 button_nav_metar_charts">
+                            <div class="row justify-content-center">
+                                <button class="nav_button">
+                                    <div class="text_content">
+                                        METAR/CHARTS
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="col-12  mt-2">
+                    <div class="row justify-content-center">
+                        <div class="zone_metar_charts">
+                            <div class=" col-12 mt-1">
+                                <div class="row justify-content-center">
+                                    <input type="text" class="input_zone_metar_charts" placeholder="Write ICAO of Airport">
+                                    <button class="button_form mt-1">
+                                        <div class="text_in_button_form">
+                                            Request
+                                        </div>
+                                    </button>
+    
+                                    <div class="zone_display_metar mt-1">
+    
+                                    </div>
+                                    <div class="titre_zone_charts">
+                                        IFR CHARTS
+                                    </div>
+    
+                                    <input type="text" class="input_zone_metar_charts" placeholder="Choose IFR Charts">
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                
             </div>
-
-            
+    
         </div>
-
+    
     </div>
-
-</div>
+</body>
 
 <!--<script src="app.js"></script>-->

@@ -1,8 +1,13 @@
-.page_content{
+body{
     height: 250px;
     width: 280px;
+    margin:0px !important;
+    border-radius: 5px
+}
+.page_content{
+    height: 100%;
+    width: 100%;
     background-color:#454242;
-    
 }
 
 .nav_button{
@@ -62,12 +67,12 @@
     font-weight: lighter;
     font-style: italic;
 }
-.input_airport{
+.input_zone_metar_charts{
     width: 98%;
     border-style: solid;
     border-color: #707070;
     border-radius: 20px;
-    text-indent: 0.2em;
+    text-align: center;
 
 }
 .text_in_button_form{
@@ -82,4 +87,20 @@
     border-color:#7D9ED4;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.0); /* Transparant */
+}
+
+.zone_display_metar{
+    width: 98%;
+    height:40px;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);   /* Transparant */
+}
+
+.titre_zone_charts{
+    font-family: Palatino;
+    font-size: 1.2em;
+    color: #7D9ED4;
 }
