@@ -5,8 +5,9 @@ button_charts.addEventListener('click',open_link_of_sia)
 
 $.ajax({
   type: 'GET',
-  url: 'http://asanio.alwaysdata.net/index.php?request=airport_list',
+  url: 'http://asanio.alwaysdata.net/index.php',
   dataType: 'html',
+  data : {request :'airport_list' },
   success: function (result) {
     document.getElementById('content_for_datalist').innerHTML = result
   }
@@ -14,8 +15,9 @@ $.ajax({
 
 $.ajax({
   type: 'GET',
-  url: 'http://asanio.alwaysdata.net/index.php?request=Windiest_airport',
+  url: 'http://asanio.alwaysdata.net/index.php',
   dataType: 'json',
+  data : {request :'Windiest_airport' },
   success: function (result) {
     document.getElementById('windiest_airport_name').innerText = result['name_of_airport'] + '(' + result['name_of_countrie'] + ')'
     document.getElementById('windiest_metar').innerText = result['metar']
@@ -30,7 +32,7 @@ function getMetar(){
 
     $.ajax({
         type: 'GET',
-        url: 'http://asanio.alwaysdata.net/index.php?request=metar_of_airport&airport='+airport,
+        url: 'http://asanio.alwaysdata.net/index.php',
         data: { request: "metar_of_airport", airport: airport },
         dataType: 'json',
         success: function (result) {
@@ -47,7 +49,7 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
 
   $.ajax({
     type: 'GET',
-    url: 'http://asanio.alwaysdata.net/index.php?request=list_charts_of_airport&airport='+icao_airport,
+    url: 'http://asanio.alwaysdata.net/index.php',
     data: { request: "list_charts_of_airport", airport: icao_airport },
     dataType: 'html',
     statusCode: {
@@ -72,7 +74,7 @@ function open_link_of_sia(){
   
   $.ajax({
     type: 'GET',
-    url: 'http://asanio.alwaysdata.net/index.php?request=get_url_of_chart&charts='+name_of_chart,
+    url: 'http://asanio.alwaysdata.net/index.php',
     data: { request: "get_url_of_chart", charts: name_of_chart },
     dataType: 'json',
     success: function (result) {
