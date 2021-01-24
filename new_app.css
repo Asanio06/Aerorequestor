@@ -11,10 +11,35 @@
     border-style: solid;
     border-color: #707070;
     border-radius: 50px;
-    background-color: rgba(0, 0, 0, 0.0); 
+    background-color: rgba(0, 0, 0, 0.0); /* Transparant */
 
 }
 
 .nav_button .text_content{
- color: #7D9ED4;
+    font-size: 0.9em;
+    color: #7D9ED4;
+}
+
+.zone_windiest_airport{
+    width: 95%;
+    height:80px;
+    border-style: solid;
+    border-color: #707070;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);   /* Transparant */
+}
+
+.titre_zone{
+    color: #65939F;
+    font-size: 1.2em ;
+    font-weight: bold;
+    text-align: center;
+
+}
+.welcome_message{
+    margin-left: 0.1em;
+    color: #7D9ED4;
+    font-size: 0.8em ;
+    font-weight: lighter;
+    font-style: italic;
 }
