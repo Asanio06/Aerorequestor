@@ -1,6 +1,20 @@
 .page_content{
     height: 200px;
-    width: 250px;
+    width: 280px;
     background-color:#454242;
     
+}
+
+.nav_button{
+    height:auto;
+    width: 95%;
+    border-style: solid;
+    border-color: #707070;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.0); 
+
+}
+
+.nav_button .text_content{
+ color: #7D9ED4;
 }
