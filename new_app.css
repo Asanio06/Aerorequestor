@@ -1,5 +1,5 @@
 .page_content{
-    height: 200px;
+    height: 250px;
     width: 280px;
     background-color:#454242;
     
@@ -20,7 +20,7 @@
     color: #7D9ED4;
 }
 
-.zone_windiest_airport{
+.zone_welcome_airport{
     width: 95%;
     height:80px;
     border-style: solid;
@@ -28,6 +28,16 @@
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.0);   /* Transparant */
 }
+
+.zone_windiest_airport{
+    width: 95%;
+    height:95px;
+    border-style: solid;
+    border-color: #707070;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);   /* Transparant */
+}
+
 
 .titre_zone{
     color: #65939F;
