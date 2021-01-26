@@ -38,15 +38,19 @@
                         <div class="zone_metar_charts">
                             <div class=" col-12 mt-1">
                                 <div class="row justify-content-center">
-                                    <input type="text" class="input_zone_metar_charts" placeholder="Write ICAO of Airport">
-                                    <button class="button_form mt-1">
+                                    <input list="list_airport" class="input_zone_metar_charts" id="ICAO_airport" placeholder="Write ICAO of Airport">
+                                    <div id="content_for_datalist">
+
+                                    </div>
+
+                                    <button class="button_form mt-1" id="Request">
                                         <div class="text_in_button_form">
                                             Request
                                         </div>
                                     </button>
     
                                     <div class="zone_display_metar mt-1">
-    
+                                        <div id="Metar_display"></div>
                                     </div>
                                     <div class="titre_zone_charts">
                                         IFR CHARTS
@@ -69,4 +73,4 @@
     </div>
 </body>
 
-<!--<script src="app.js"></script>-->
+<script src="metar_charts.js"></script>

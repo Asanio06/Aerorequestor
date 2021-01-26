@@ -25,25 +25,7 @@ $.ajax({
   }
 });
 
-function getMetar(){
 
-    var airport = document.getElementById('ICAO_airport').value
-    airport = airport.toUpperCase()
-
-    $.ajax({
-        type: 'GET',
-        url: 'http://asanio.alwaysdata.net/index.php',
-        data: { request: "metar_of_airport", airport: airport },
-        dataType: 'json',
-        success: function (result) {
-          document.getElementById('METAR').innerText = result['metar']
-          document.getElementById('advise').innerText = result['advise']
-          document.getElementById('advise_content').style.visibility = 'visible'
-          get_datalist_ifr_charts_of_airport(airport)
-        }
-      });
-
-}
 
 function get_datalist_ifr_charts_of_airport(icao_airport){
 

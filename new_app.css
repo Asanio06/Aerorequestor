@@ -104,3 +104,26 @@ body{
     font-size: 1.2em;
     color: #7D9ED4;
 }
+
+#name_of_windiest_airport{
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(87, 87, 87);
+    font-weight: light;
+    font-size: 1em;
+}
+
+#metar_of_windiest_aiport{
+    margin-top: 2px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+   }
+
+#Metar_display{
+margin-top: 2px;
+text-align: center;
+font-style: italic;
+font-weight: bold;
+}
