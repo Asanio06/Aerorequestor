@@ -1,5 +1,5 @@
 body{
-    height: 250px;
+    height: auto;
     width: 280px;
     margin:0px !important;
     border-radius: 5px
@@ -45,11 +45,13 @@ body{
 
 .zone_metar_charts{
     width: 98%;
-    height:200px;
+    min-height:200px;
+    height:95%;
     border-style: solid;
     border-color: #707070;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.0);   /* Transparant */
+    margin-bottom: 0.5em;
 }
 
 
@@ -91,7 +93,7 @@ body{
 
 .zone_display_metar{
     width: 98%;
-    height:40px;
+    height:auto;
     border-style: solid;
     border-color: #707070;
     border-width: 1px;
@@ -122,8 +124,10 @@ body{
    }
 
 #Metar_display{
-margin-top: 2px;
-text-align: center;
-font-style: italic;
-font-weight: bold;
+    margin-top: 2px;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    color: white;
+    font-size: 0.8em;
 }
