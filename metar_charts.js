@@ -1,7 +1,7 @@
 var button_Request= document.getElementById('Request')
 button_Request.addEventListener('click',getMetar)
-/*var button_charts = document.getElementById('Charts')
-button_charts.addEventListener('click',open_link_of_sia)*/
+var button_charts = document.getElementById('Open_charts')
+button_charts.addEventListener('click',open_link_of_sia)
 
 $.ajax({
     type: 'GET',
@@ -44,12 +44,12 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
     dataType: 'html',
     statusCode: {
       204: function() {
-        document.getElementById('zone_charts').style.visibility = 'hidden'
+        document.getElementById('zone_ifr_charts').style.visibility = 'hidden'
       }
     },
     success: function (result) {
       if(result){
-        document.getElementById('zone_charts').style.visibility = 'visible'
+        document.getElementById('zone_ifr_charts').style.visibility = 'visible'
         //document.getElementById('list_ifr_charts').value = ''
         document.getElementById('content_for_datalist_list_ifr_chart').innerHTML = result
       }
@@ -60,7 +60,7 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
 }
 
 function open_link_of_sia(){
-    var name_of_chart = document.getElementById('list_ifr_charts').value
+    var name_of_chart = document.getElementById('chart_selected').value
     
     $.ajax({
       type: 'GET',
