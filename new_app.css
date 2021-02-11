@@ -123,11 +123,21 @@ body{
     color: white;
    }
 
-#Metar_display{
+#Metar_display,#Airport_Advise{
     margin-top: 2px;
     text-align: center;
     font-style: italic;
     font-weight: lighter;
     color: white;
     font-size: 0.8em;
+}
+
+#Advise_title{
+    margin-top: 2px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    font-size: 0.8em;
+    text-decoration: underline;
 }

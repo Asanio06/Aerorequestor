@@ -26,7 +26,8 @@ function getMetar(){
         dataType: 'json',
         success: function (result) {
           document.getElementById('Metar_display').innerText = result['metar']
-          /*document.getElementById('advise').innerText = result['advise']
+          document.getElementById('Airport_Advise').innerText = result['advise']
+          /*
           document.getElementById('advise_content').style.visibility = 'visible'
           get_datalist_ifr_charts_of_airport(airport)*/
         }
