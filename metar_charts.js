@@ -27,9 +27,9 @@ function getMetar(){
         success: function (result) {
           document.getElementById('Metar_display').innerText = result['metar']
           document.getElementById('Airport_Advise').innerText = result['advise']
-          /*
-          document.getElementById('advise_content').style.visibility = 'visible'
-          get_datalist_ifr_charts_of_airport(airport)*/
+          
+          //document.getElementById('advise_content').style.visibility = 'visible'
+          get_datalist_ifr_charts_of_airport(airport)
         }
       });
 
@@ -49,8 +49,8 @@ function get_datalist_ifr_charts_of_airport(icao_airport){
     },
     success: function (result) {
       if(result){
-        /*document.getElementById('zone_charts').style.visibility = 'visible'
-        document.getElementById('list_ifr_charts').value = ''*/
+        document.getElementById('zone_charts').style.visibility = 'visible'
+        //document.getElementById('list_ifr_charts').value = ''
         document.getElementById('content_for_datalist_list_ifr_chart').innerHTML = result
       }
   

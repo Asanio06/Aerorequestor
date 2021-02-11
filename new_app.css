@@ -84,7 +84,8 @@ body{
 }
 .button_form{
     height:auto;
-    width: 35%;
+    min-width: 35%;
+    width: auto;
     border-style: solid;
     border-color:#7D9ED4;
     border-radius: 10px;
@@ -140,4 +141,8 @@ body{
     color: white;
     font-size: 0.8em;
     text-decoration: underline;
+}
+
+#zone_charts{
+    visibility: hidden;
 }
