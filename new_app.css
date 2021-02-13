@@ -143,6 +143,6 @@ body{
     text-decoration: underline;
 }
 
-#zone_ifr_charts{
+#zone_ifr_charts,#zone_display_metar{
     visibility: hidden;
 }

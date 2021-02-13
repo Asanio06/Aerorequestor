@@ -25,6 +25,7 @@ function getMetar(){
         data: { request: "metar_of_airport", airport: airport },
         dataType: 'json',
         success: function (result) {
+          document.getElementById('zone_display_metar').style.visibility = 'visible'
           document.getElementById('Metar_display').innerText = result['metar']
           document.getElementById('Airport_Advise').innerText = result['advise']
           
