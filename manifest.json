@@ -2,7 +2,7 @@
     "manifest_version": 2, 
     "name": "Aerorequestor",
     "description": "A venir", 
-    "version": "0.1",
+    "version": "0.7",
     "permissions": [ 
      "http://*/*",
      "https://*/*",

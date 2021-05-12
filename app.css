@@ -149,6 +149,6 @@ body{
     text-decoration: underline;
 }
 
-#zone_ifr_charts,#zone_display_metar{
+#zone_ifr_charts,#zone_display_metar,#zone_vfr_charts{
     visibility: hidden;
 }
