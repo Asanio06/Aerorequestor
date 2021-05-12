@@ -38,10 +38,8 @@
                         <div class="zone_metar_charts">
                             <div class=" col-12 mt-1">
                                 <div class="row justify-content-center">
-                                    <input list="list_airport" class="input_zone_metar_charts" id="ICAO_airport" placeholder="Write ICAO of Airport">
-                                    <div id="content_for_datalist">
+                                    <input  class="input_zone_metar_charts" id="ICAO_airport" placeholder="Saississez le code ICAO">
 
-                                    </div>
 
                                     <button class="button_form mt-1" id="Request">
                                         <div class="text_in_button_form">
@@ -60,11 +58,11 @@
                                             IFR CHARTS
                                         </div>
         
-                                        <input list="list_ifr_chart" id="chart_selected" class="input_zone_metar_charts mb-1" placeholder="Choose IFR Charts">
-                                        <div id="content_for_datalist_list_ifr_chart">
-    
-                                        </div>
-    
+                                        <select  id="chart_selected" class="input_zone_metar_charts mb-1"  autocomplete="on">
+                                            <option value="">--Choose IFR Charts--</option>
+
+                                        </select>
+
                                         <button class="button_form mt-1 ml-1" id="Open_charts">
                                             <div class="text_in_button_form">
                                                 Open Charts
@@ -73,10 +71,12 @@
                                     </div>
 
                                     <div id="zone_vfr_charts">
-
+                                        <div class="text-center">
+                                            A VFR chart is enable for this airport <span id="lien_chart_vfr"></span>
+                                            
+                                        </div>
                                     </div>
                                     
-    
                                 </div>
                             </div>
                             
@@ -90,6 +90,13 @@
         </div>
     
     </div>
+    <datalist id="list_airport">
+
+    </datalist>
+    <datalist id="list_ifr_chart">
+
+    </datalist>
+
 </body>
 
 <script src="metar_charts.js"></script>
