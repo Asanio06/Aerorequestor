@@ -52,8 +52,7 @@ function get_charts_of_airport(airport) {
         document.getElementById('zone_ifr_charts').style.visibility = 'visible';
 
         let selectInput = document.getElementById('chart_selected');
-        $("chart_selected").empty()
-
+        selectInput.innerHTML = ""
         charts.forEach((chart) => {
             if (chart.Chart_type == "VFR") {
                 document.getElementById('zone_vfr_charts').style.visibility = 'visible'
