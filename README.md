@@ -15,3 +15,29 @@ Next step :
 - [ ] Display list of charts of airport in Belgium
 - [ ] Display list of charts of airport in United Kingdom
 - [ ] Have the recommended runway
+
+
+
+Charts available for countrie:
+
+
+- France
+- Belgique
+- Luxembourg
+- Bénin
+- Burkina Faso
+- Cameroun
+- Centrafrique
+- Congo
+- Côte d'Ivoire
+- Gabon
+- Guinée Equatoriale
+- Madagascar
+- Mali
+- Mauritanie
+- Niger
+- Sénégal
+- Tchad
+- Togo
+- Comores
+- Guinée Bissau

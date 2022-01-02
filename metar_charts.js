@@ -1,30 +1,7 @@
-const urlApi = 'http://localhost:8000/api';
-
 var button_Request = document.getElementById('Request')
 button_Request.addEventListener('click', getMetar)
 var button_charts = document.getElementById('Open_charts')
 button_charts.addEventListener('click', open_link_of_sia)
-var link_vfr_charts = document.getElementById('lien_chart_vfr')
-link_vfr_charts.addEventListener('click', open_vfr_chart)
-
-// $.ajax({
-//     type: 'GET',
-//     url: `${urlApi}/airport/`,
-//     dataType: 'json',
-//     success: function (result) {
-//         const listAirport = result.allAirport;
-//         console.log(listAirport[0])
-//
-//         let selectInput = document.getElementById('ICAO_airport');
-//         listAirport.forEach((airport) => {
-//             var opt = document.createElement("option");
-//             opt.value = airport.ident;
-//             opt.text = airport.ident;
-//             selectInput.add(opt)
-//
-//         })
-//     }
-// });
 
 
 function getMetar() {
@@ -34,13 +11,12 @@ function getMetar() {
 
     $.ajax({
         type: 'GET',
-        url: `${urlApi}/weather/metar/${airportICAO}`,
+        url: `${urlApi}/airport/${airportICAO}`,
         dataType: 'json',
-        success: function (result) {
+        success: function ({airport}) {
             document.getElementById('zone_display_metar').style.visibility = 'visible';
-            console.log(result)
-            document.getElementById('Metar_display').innerText = result.weatherData.raw_text;
-            const flightCategory = result.weatherData.flight_category;
+            document.getElementById('Metar_display').innerText = airport.Metar.raw_text;
+            const flightCategory = airport.Metar.flight_category;
             let advise;
             if (flightCategory) {
 
@@ -59,79 +35,46 @@ function getMetar() {
             document.getElementById('Airport_Advise').innerText = advise;
 
             document.getElementById('Airport_Advise').style.visibility = 'visible';
-            get_charts_of_airport(airportICAO)
+            get_charts_of_airport(airport)
         }
     });
 
 }
 
-function get_charts_of_airport(icao_airport) {
+function get_charts_of_airport(airport) {
 
-    $.ajax({
-        type: 'GET',
-        url: `${urlApi}/chart/airport/${icao_airport}`,
-        dataType: 'json',
-        statusCode: {
-            400: function () {
-                document.getElementById('zone_ifr_charts').style.visibility = 'hidden';
-            }
-        },
-        success: function (result) {
-            if (result) {
-                document.getElementById('zone_ifr_charts').style.visibility = 'visible';
-                const listChart = result.listCarteAerport;
-                console.log(result)
+    const charts = airport.Charts;
 
-                let selectInput = document.getElementById('chart_selected');
+    if (airport.Charts.length === 0) {
+        document.getElementById('zone_ifr_charts').style.visibility = 'hidden';
 
-                listChart.forEach((chart) => {
-                    if (chart.Chart_type == "VFR") {
-                        document.getElementById('zone_vfr_charts').style.visibility = 'visible'
+    } else {
+        document.getElementById('zone_ifr_charts').style.visibility = 'visible';
 
-                        document.getElementById('lien_chart_vfr').innerHTML = '<a href="' + chart.url + '"' + ' target="_blank">LIEN</a>'
-                    } else {
+        let selectInput = document.getElementById('chart_selected');
+        $("chart_selected").empty()
 
-                        let opt = document.createElement("option");
-                        opt.value = chart.url;
-                        opt.text = chart.Chart_name;
-                        selectInput.add(opt)
-                    }
+        charts.forEach((chart) => {
+            if (chart.Chart_type == "VFR") {
+                document.getElementById('zone_vfr_charts').style.visibility = 'visible'
 
+                document.getElementById('lien_chart_vfr').innerHTML = '<a href="' + chart.Chart_url + '"' + ' target="_blank">LIEN</a>'
+            } else {
 
-                })
+                let opt = document.createElement("option");
+                opt.value = chart.Chart_url;
+                opt.text = chart.Chart_name;
+                selectInput.add(opt)
             }
 
-        }
-    });
+
+        })
+    }
+
+
 
 }
 
-
-function open_vfr_chart() {
-    var airport = document.getElementById('ICAO_airport').value
-    airport = airport.toUpperCase()
-
-    $.ajax({
-        type: 'GET',
-        url: 'http://asanio.alwaysdata.net/index.php',
-        data: {request: "get_url_of_vfr_chart", airport: airport},
-        dataType: 'json',
-        statusCode: {
-            204: function () {
-                document.getElementById('zone_vfr_charts').style.visibility = 'hidden'
-            }
-        },
-        success: function (result) {
-            if (result) {
-
-                chrome.tabs.create({url: result});
-
-            }
-
-        }
-    });
-
-}
 
 function open_link_of_sia() {
 

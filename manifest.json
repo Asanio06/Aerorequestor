@@ -1,12 +1,11 @@
 {
     "manifest_version": 2, 
     "name": "Aerorequestor",
-    "description": "A venir", 
-    "version": "0.7",
+    "description": "Une application permettant d'obtenir de nombreuse données intéressante concernant l'aéronautique",
+    "version": "0.8",
     "permissions": [ 
      "http://*/*",
-     "https://*/*",
-     "tabs"
+     "https://*/*"
     ],
     
     "browser_action": {   
