@@ -2,17 +2,17 @@
     "manifest_version": 2, 
     "name": "Aerorequestor",
     "description": "Une application permettant d'obtenir de nombreuse données intéressante concernant l'aéronautique",
-    "version": "0.8",
+    "version": "0.11",
     "permissions": [ 
      "http://*/*",
      "https://*/*"
     ],
     
     "browser_action": {   
-     "default_icon" : "image/airplane_icon.png", 
+     "default_icon" : "ressources/image/airplane_icon.png",
      "default_popup": "app.html" 
     },
     "icons": { 
-     "128" : "image/airplane_icon.png" 
+     "128" : "ressources/image/airplane_icon.png"
     }
    }

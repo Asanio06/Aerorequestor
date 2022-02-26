@@ -3,6 +3,9 @@ button_Request.addEventListener('click', getMetar)
 var button_charts = document.getElementById('Open_charts')
 button_charts.addEventListener('click', open_link_of_sia)
 
+var formMetar = document.getElementById('ICAO_airport')
+formMetar.addEventListener('submit', getMetar)
+
 
 function getMetar() {
 
@@ -54,7 +57,7 @@ function get_charts_of_airport(airport) {
         let selectInput = document.getElementById('chart_selected');
         selectInput.innerHTML = ""
         charts.forEach((chart) => {
-            if (chart.Chart_type == "VFR") {
+            if (chart.Chart_type === "VFR") {
                 document.getElementById('zone_vfr_charts').style.visibility = 'visible'
 
                 document.getElementById('lien_chart_vfr').innerHTML = '<a href="' + chart.Chart_url + '"' + ' target="_blank">LIEN</a>'
